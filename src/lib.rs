@@ -498,6 +498,14 @@ mod tests {
                     ("mainfont".into(), "Noto Serif".into()),
                     ("sansfont".into(), "Noto Sans".into()),
                     ("monofont".into(), "Noto Sans Mono".into()),
+                    (
+                        "header-includes".into(),
+                        r"
+\usepackage[Latin,Greek,Emoticons]{ucharclasses}
+\newfontfamily\emojifont{Noto Color Emoji}
+\setTransitionsFor{Emoticons}{\begingroup\emojifont}{\endgroup}
+                        ",
+                    ),
                 ]),
                 rest: Default::default(),
             }
