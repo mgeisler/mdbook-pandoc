@@ -504,7 +504,7 @@ mod tests {
 \usepackage[Latin,Greek,Emoticons]{ucharclasses}
 \newfontfamily\emojifont{Noto Color Emoji}
 \setTransitionsFor{Emoticons}{\begingroup\emojifont}{\endgroup}
-                        ",
+                        ".into(),
                     ),
                 ]),
                 rest: Default::default(),
