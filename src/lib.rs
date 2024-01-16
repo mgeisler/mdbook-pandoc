@@ -498,7 +498,7 @@ mod tests {
                         "header-includes".into(),
                         r"
 \usepackage[Latin,Greek,Emoticons]{ucharclasses}
-\newfontfamily\emojifont{Noto Color Emoji}
+\newfontfamily\emojifont{Noto Emoji}
 \setTransitionsFor{Emoticons}{\begingroup\emojifont}{\endgroup}
                         "
                         .into(),
