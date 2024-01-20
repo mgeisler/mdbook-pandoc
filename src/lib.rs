@@ -494,15 +494,9 @@ mod tests {
                     ("mainfont".into(), "Noto Serif".into()),
                     ("sansfont".into(), "Noto Sans".into()),
                     ("monofont".into(), "Noto Sans Mono".into()),
-                    (
-                        "header-includes".into(),
-                        r"
-\usepackage[Latin,Greek,Emoticons]{ucharclasses}
-\newfontfamily\emojifont{Noto Emoji}
-\setTransitionsFor{Emoticons}{\begingroup\emojifont}{\endgroup}
-                        "
-                        .into(),
-                    ),
+                    ("mainfontfallback".into(), "NotoColorEmoji:mode=harf".into()),
+                    ("sansfontfallback".into(), "NotoColorEmoji:mode=harf".into()),
+                    ("monofontfallback".into(), "NotoColorEmoji:mode=harf".into()),
                 ]),
                 rest: Default::default(),
             }
