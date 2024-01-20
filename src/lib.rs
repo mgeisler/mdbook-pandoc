@@ -485,7 +485,11 @@ mod tests {
                 file_scope: true,
                 number_sections: true,
                 output_file: "book.pdf".into(),
-                pdf_engine: Some("xelatex".into()),
+                pdf_engine: Some(
+                    env::var_os("PDF_ENGINE")
+                        .map(Into::into)
+                        .unwrap_or("lualatex".into()),
+                ),
                 standalone: true,
                 to: Some("latex".into()),
                 table_of_contents: true,
