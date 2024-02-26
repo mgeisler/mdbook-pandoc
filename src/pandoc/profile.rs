@@ -92,7 +92,9 @@ impl Profile {
             (Some(_), _) => false,
             (None, None) => false,
             (None, Some(extension)) => {
-                extension == "tex" || (extension == "pdf" && pdf_engine_is_latex())
+                extension == "tex"
+                    || extension == "latex"
+                    || (extension == "pdf" && pdf_engine_is_latex())
             }
         }
     }
